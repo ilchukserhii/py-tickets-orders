@@ -117,7 +117,7 @@ class TicketCreateSerializer(serializers.ModelSerializer):
 
     def validate(self, attrs):
         ticket = Ticket(**attrs)
-        ticket.save()
+        ticket.full_clean()
         return attrs
 
 
